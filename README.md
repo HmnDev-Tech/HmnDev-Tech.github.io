@@ -1,11 +1,17 @@
-﻿# HmnDev-Tech.github.io
+# HmnDev-Tech.github.io
 
-Shevery landing site (Next.js static export), served at https://hmndev-tech.github.io/.
+Two Next.js static sites in one repo, deployed together to GitHub Pages.
+
+| Folder | URL | What |
+| --- | --- | --- |
+| [`profile/`](profile) | https://hmndev-tech.github.io/ | Main profile site (hamondev / HmnDev-Tech) |
+| [`shevery/`](shevery) | https://hmndev-tech.github.io/shevery/ | Shevery landing page (built with `BASE_PATH=/shevery`) |
+
+Shevery app source: https://github.com/HmnDev-Tech/shevery
 
 ```
-pnpm install
-pnpm dev     # local
-pnpm build   # static output in ./out
+cd profile && pnpm install && pnpm dev
+cd shevery && pnpm install && pnpm dev
 ```
 
-Deploys automatically to GitHub Pages on push to `main`.
+`.github/workflows/pages.yml` builds both and assembles them into one artifact on every push to `main`.

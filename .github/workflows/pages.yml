@@ -1,4 +1,4 @@
-﻿name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -26,11 +26,35 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
+          cache-dependency-path: |
+            profile/pnpm-lock.yaml
+            shevery/pnpm-lock.yaml
+
+      - name: Build profile (site root)
+        working-directory: profile
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+
+      - name: Build Shevery (mounted at /shevery)
+        working-directory: shevery
+        env:
+          BASE_PATH: /shevery
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm build
+
+      - name: Assemble site
+        run: |
+          mkdir site
+          cp -r profile/out/. site/
+          mkdir site/shevery
+          cp -r shevery/out/. site/shevery/
+          touch site/.nojekyll
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: site
 
   deploy:
     needs: build
