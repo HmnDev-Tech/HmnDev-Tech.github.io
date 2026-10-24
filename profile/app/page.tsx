@@ -69,7 +69,7 @@ export default function Home() {
               dev
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-on-surface-variant">
-              I like to code, just code… Android apps, Shizuku tooling and Material 3 Expressive interfaces.
+              I like to code, just code…
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -119,7 +119,7 @@ export default function Home() {
           <Reveal>
             <p className="font-mono text-sm text-m3-primary">01 / about</p>
             <h2 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-              Code first. Polish second. Coffee optional.
+              Code first. Polish second. Coffee optional(But not now).
             </h2>
           </Reveal>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -290,10 +290,6 @@ export default function Home() {
           </Reveal>
         </section>
       </main>
-
-      <footer className="border-t border-outline-variant/50 py-8 text-center text-sm text-on-surface-variant font-mono">
-        © {new Date().getFullYear()} hamondev · HmnDev-Tech
-      </footer>
     </>
   )
 }

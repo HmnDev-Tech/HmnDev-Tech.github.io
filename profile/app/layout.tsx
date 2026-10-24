@@ -17,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "hamondev — Android developer · HmnDev-Tech",
   description:
-    "hamondev (HmnDev-Tech): Android developer from Kazakhstan building Shevery, BLE-Droid, Nightzuku and other Material 3 Expressive apps.",
+    "hamondev (HmnDev-Tech): Android developer from Kazakhstan building Shevery, BLE-Droid, and other Material 3 Expressive apps.",
 }
 
 export const viewport: Viewport = {
