@@ -69,7 +69,7 @@ export default function Home() {
               dev
             </h1>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-on-surface-variant">
-              I like to code, just code…
+              I like to code, just code… Android apps, Shizuku tooling and Material 3 Expressive interfaces.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -119,7 +119,7 @@ export default function Home() {
           <Reveal>
             <p className="font-mono text-sm text-m3-primary">01 / about</p>
             <h2 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-              Code first. Polish second. Coffee optional(But not now).
+              Code first. Polish second. Coffee optional.
             </h2>
           </Reveal>
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -137,7 +137,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 02 / about me (Country, City, Languages, Programming Stack with SVGs) */}
+        {/* 02 / about me (Country, City, Languages, Programming Stack with official SVGs, no emojis) */}
         <section id="me" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <Reveal>
             <p className="font-mono text-sm text-yellow-400">02 / about me</p>
@@ -150,9 +150,9 @@ export default function Home() {
             <Reveal delay={0}>
               <div className="h-full rounded-2xl bg-surface-2 p-6 border border-outline-variant/40 transition-[border-radius,background-color] duration-300 ease-spring hover:rounded-sm hover:bg-surface-3">
                 <p className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">Country</p>
-                <div className="mt-3 flex items-center gap-3">
-                  <span className="text-2xl">🇰🇿</span>
-                  <span className="text-xl font-bold text-on-surface">Kazakhstan</span>
+                <div className="mt-3">
+                  <span className="text-2xl font-bold text-on-surface tracking-tight">Kazakhstan</span>
+                  <p className="mt-1 font-mono text-xs text-on-surface-variant">Central Asia</p>
                 </div>
               </div>
             </Reveal>
@@ -160,9 +160,9 @@ export default function Home() {
             <Reveal delay={80}>
               <div className="h-full rounded-2xl bg-surface-2 p-6 border border-outline-variant/40 transition-[border-radius,background-color] duration-300 ease-spring hover:rounded-sm hover:bg-surface-3">
                 <p className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">City</p>
-                <div className="mt-3 flex items-center gap-3">
-                  <span className="text-2xl">🏔️</span>
-                  <span className="text-xl font-bold text-on-surface">Almaty</span>
+                <div className="mt-3">
+                  <span className="text-2xl font-bold text-on-surface tracking-tight">Almaty</span>
+                  <p className="mt-1 font-mono text-xs text-on-surface-variant">Timezone UTC+5</p>
                 </div>
               </div>
             </Reveal>
@@ -172,7 +172,7 @@ export default function Home() {
                 <p className="font-mono text-xs uppercase tracking-widest text-on-surface-variant">Languages</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {["English", "Qazaqsha", "Русский"].map((lang) => (
-                    <span key={lang} className="rounded-full bg-surface-3 px-3 py-1 font-medium text-xs text-on-surface">
+                    <span key={lang} className="rounded-full bg-surface-3 px-3.5 py-1.5 font-medium text-xs text-on-surface">
                       {lang}
                     </span>
                   ))}
@@ -181,7 +181,7 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* Programming Languages Stack with SVGs */}
+          {/* Programming Languages Stack with official SVGs */}
           <Reveal delay={240} className="mt-4">
             <div className="rounded-2xl bg-surface-2 p-6 border border-outline-variant/40">
               <p className="font-mono text-xs uppercase tracking-widest text-yellow-400 font-semibold">Programming Stack</p>
@@ -197,8 +197,8 @@ export default function Home() {
                     key={name}
                     className="flex items-center gap-3 rounded-xl bg-surface-3 p-3.5 transition-[border-radius,background-color] duration-300 ease-spring hover:rounded-sm hover:bg-surface-4"
                   >
-                    <Icon className="size-7 shrink-0" />
-                    <span className="font-bold text-sm text-on-surface">{name}</span>
+                    <Icon className="size-6 shrink-0" />
+                    <span className="font-bold text-sm text-on-surface tracking-tight">{name}</span>
                   </div>
                 ))}
               </div>
@@ -290,6 +290,10 @@ export default function Home() {
           </Reveal>
         </section>
       </main>
+
+      <footer className="border-t border-outline-variant/50 py-8 text-center text-sm text-on-surface-variant font-mono">
+        © {new Date().getFullYear()} hamondev · HmnDev-Tech
+      </footer>
     </>
   )
 }
