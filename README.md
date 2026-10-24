@@ -7,8 +7,6 @@ Two Next.js static sites in one repo, deployed together to GitHub Pages.
 | [`profile/`](profile) | https://hmndev-tech.github.io/ | Main profile site (hamondev / HmnDev-Tech) |
 | [`shevery/`](shevery) | https://hmndev-tech.github.io/shevery/ | Shevery landing page (built with `BASE_PATH=/shevery`) |
 
-Shevery app source: https://github.com/HmnDev-Tech/shevery
-
 ```
 cd profile && pnpm install && pnpm dev
 cd shevery && pnpm install && pnpm dev
