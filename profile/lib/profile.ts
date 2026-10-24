@@ -1,8 +1,9 @@
 export type Social = { label: string; href: string; bg: string; fg: string }
 
-// Telegram and Reddit are added once the handles are confirmed.
 export const socials: Social[] = [
   { label: "GitHub", href: "https://github.com/HmnDev-Tech", bg: "#f0f1f6", fg: "#070916" },
+  { label: "Telegram", href: "https://t.me/hmndevtech", bg: "#1a76ab", fg: "#ffffff" },
+  { label: "Reddit", href: "https://www.reddit.com/u/HamonTech_official", bg: "#c43a00", fg: "#ffffff" },
   { label: "X / Twitter", href: "https://x.com/hamon73507", bg: "#1c2033", fg: "#f0f1f6" },
 ]
 
