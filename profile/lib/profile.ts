@@ -15,6 +15,7 @@ export type Project = {
   featured?: boolean
 }
 
+// Only verified public repositories
 export const projects: Project[] = [
   {
     name: "Shevery",
@@ -28,13 +29,7 @@ export const projects: Project[] = [
     name: "BLE-Droid",
     blurb: "Advanced BLE app built with Material 3 Expressive and Jetpack Compose.",
     href: "https://github.com/HmnDev-Tech/BLE-Droid",
-    tags: ["Android", "Compose"],
-  },
-  {
-    name: "Nightzuku-Reforked",
-    blurb: "Shizuku fork with Material 3 Expressive and Android SDK 37 updates.",
-    href: "https://github.com/HmnDev-Tech/Nightzuku-Reforked",
-    tags: ["Shizuku", "SDK 37"],
+    tags: ["Android", "Compose", "BLE"],
   },
   {
     name: "ShizuConfigs",
@@ -43,25 +38,34 @@ export const projects: Project[] = [
     tags: ["Shevery", "Modules"],
   },
   {
-    name: "BatteryChecker",
-    blurb: "Battery monitoring utility.",
-    href: "https://github.com/HmnDev-Tech/BatteryChecker",
-    tags: ["Android"],
+    name: "BPatch",
+    blurb: "The modernized Android rooting app with Jetpack Compose, APatch Fork.",
+    href: "https://github.com/HmnDev-Tech/BPatch",
+    tags: ["Root", "APatch", "Compose"],
   },
   {
-    name: "Gemini Chat Client Revived",
-    blurb: "Continuation of the old Gemini Chat Client project by hamondev.",
-    href: "https://github.com/HmnDev-Tech/Gemini-chat-client-revived",
-    tags: ["Gemini", "Chat"],
+    name: "Overcast-Next",
+    blurb: "Weather is also Essential — sleek weather app.",
+    href: "https://github.com/HmnDev-Tech/Overcast-Next",
+    tags: ["Weather", "Kotlin", "Compose"],
+  },
+  {
+    name: "essentials",
+    blurb: "Essential tools and mods for Android nerds.",
+    href: "https://github.com/HmnDev-Tech/essentials",
+    tags: ["Android", "Mods", "Tools"],
   },
 ]
 
 export const stack = [
-  "Android",
   "Kotlin",
+  "Java",
+  "TypeScript",
+  "JavaScript",
+  "Python",
+  "Android",
   "Jetpack Compose",
   "Material 3 Expressive",
   "Shizuku",
-  "TypeScript",
   "Next.js",
 ]
